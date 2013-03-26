@@ -1,10 +1,10 @@
 # RDVKeychainAccess
 
-`NSUserDefaults`-like keychain wrapper for iOS.
+`NSUserDefaults` - like keychain wrapper for iOS.
 
 ## Setup
 
-Drop the `RDVSimpleKeychainWrapper.h` and `RDVSimpleKeychainWrapper.m` into your project. If you don't have ARC
+Drop the `RDVKeychainWrapper.h` and `RDVKeychainWrapper.m` into your project. If you don't have ARC
 enabled, you will need to set a `-fobjc-arc` compiler flag on the `.m` source file.
 
 ## Requirements
