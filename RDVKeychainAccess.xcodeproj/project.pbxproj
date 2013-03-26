@@ -12,12 +12,13 @@
 		B4598B2817022EFF00C7DACD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4598B2717022EFF00C7DACD /* CoreGraphics.framework */; };
 		B4598B2E17022EFF00C7DACD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4598B2C17022EFF00C7DACD /* InfoPlist.strings */; };
 		B4598B3017022EFF00C7DACD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B2F17022EFF00C7DACD /* main.m */; };
-		B4598B3417022EFF00C7DACD /* RDVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B3317022EFF00C7DACD /* RDVAppDelegate.m */; };
 		B4598B3617022EFF00C7DACD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B4598B3517022EFF00C7DACD /* Default.png */; };
 		B4598B3817022EFF00C7DACD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4598B3717022EFF00C7DACD /* Default@2x.png */; };
 		B4598B3A17022EFF00C7DACD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4598B3917022EFF00C7DACD /* Default-568h@2x.png */; };
 		B4598B3D17022EFF00C7DACD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4598B3B17022EFF00C7DACD /* MainStoryboard.storyboard */; };
-		B4598B4017022F0000C7DACD /* RDVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B3F17022F0000C7DACD /* RDVViewController.m */; };
+		B4598B501702308B00C7DACD /* RDVKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B491702308B00C7DACD /* RDVKeychainWrapper.m */; };
+		B4598B511702308B00C7DACD /* RDVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B4C1702308B00C7DACD /* RDVAppDelegate.m */; };
+		B4598B521702308B00C7DACD /* RDVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B4F1702308B00C7DACD /* RDVViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +30,16 @@
 		B4598B2D17022EFF00C7DACD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4598B2F17022EFF00C7DACD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4598B3117022EFF00C7DACD /* RDVKeychainAccess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RDVKeychainAccess-Prefix.pch"; sourceTree = "<group>"; };
-		B4598B3217022EFF00C7DACD /* RDVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDVAppDelegate.h; sourceTree = "<group>"; };
-		B4598B3317022EFF00C7DACD /* RDVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDVAppDelegate.m; sourceTree = "<group>"; };
 		B4598B3517022EFF00C7DACD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B4598B3717022EFF00C7DACD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B4598B3917022EFF00C7DACD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B4598B3C17022EFF00C7DACD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		B4598B3E17022F0000C7DACD /* RDVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDVViewController.h; sourceTree = "<group>"; };
-		B4598B3F17022F0000C7DACD /* RDVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDVViewController.m; sourceTree = "<group>"; };
+		B4598B481702308B00C7DACD /* RDVKeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVKeychainWrapper.h; sourceTree = "<group>"; };
+		B4598B491702308B00C7DACD /* RDVKeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVKeychainWrapper.m; sourceTree = "<group>"; };
+		B4598B4B1702308B00C7DACD /* RDVAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVAppDelegate.h; sourceTree = "<group>"; };
+		B4598B4C1702308B00C7DACD /* RDVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVAppDelegate.m; sourceTree = "<group>"; };
+		B4598B4E1702308B00C7DACD /* RDVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVViewController.h; sourceTree = "<group>"; };
+		B4598B4F1702308B00C7DACD /* RDVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +86,7 @@
 		B4598B2917022EFF00C7DACD /* RDVKeychainAccess */ = {
 			isa = PBXGroup;
 			children = (
-				B4598B3217022EFF00C7DACD /* RDVAppDelegate.h */,
-				B4598B3317022EFF00C7DACD /* RDVAppDelegate.m */,
-				B4598B3B17022EFF00C7DACD /* MainStoryboard.storyboard */,
-				B4598B3E17022F0000C7DACD /* RDVViewController.h */,
-				B4598B3F17022F0000C7DACD /* RDVViewController.m */,
+				B4598B461702308B00C7DACD /* Classes */,
 				B4598B2A17022EFF00C7DACD /* Supporting Files */,
 			);
 			path = RDVKeychainAccess;
@@ -96,6 +95,7 @@
 		B4598B2A17022EFF00C7DACD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4598B3B17022EFF00C7DACD /* MainStoryboard.storyboard */,
 				B4598B2B17022EFF00C7DACD /* RDVKeychainAccess-Info.plist */,
 				B4598B2C17022EFF00C7DACD /* InfoPlist.strings */,
 				B4598B2F17022EFF00C7DACD /* main.m */,
@@ -105,6 +105,43 @@
 				B4598B3917022EFF00C7DACD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4598B461702308B00C7DACD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B4598B471702308B00C7DACD /* Additions */,
+				B4598B4A1702308B00C7DACD /* App Delegate */,
+				B4598B4D1702308B00C7DACD /* Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B4598B471702308B00C7DACD /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				B4598B481702308B00C7DACD /* RDVKeychainWrapper.h */,
+				B4598B491702308B00C7DACD /* RDVKeychainWrapper.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		B4598B4A1702308B00C7DACD /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B4598B4B1702308B00C7DACD /* RDVAppDelegate.h */,
+				B4598B4C1702308B00C7DACD /* RDVAppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		B4598B4D1702308B00C7DACD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4598B4E1702308B00C7DACD /* RDVViewController.h */,
+				B4598B4F1702308B00C7DACD /* RDVViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4598B3017022EFF00C7DACD /* main.m in Sources */,
-				B4598B3417022EFF00C7DACD /* RDVAppDelegate.m in Sources */,
-				B4598B4017022F0000C7DACD /* RDVViewController.m in Sources */,
+				B4598B501702308B00C7DACD /* RDVKeychainWrapper.m in Sources */,
+				B4598B511702308B00C7DACD /* RDVAppDelegate.m in Sources */,
+				B4598B521702308B00C7DACD /* RDVViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +302,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RDVKeychainAccess/RDVKeychainAccess-Prefix.pch";
 				INFOPLIST_FILE = "RDVKeychainAccess/RDVKeychainAccess-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +314,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RDVKeychainAccess/RDVKeychainAccess-Prefix.pch";
 				INFOPLIST_FILE = "RDVKeychainAccess/RDVKeychainAccess-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,6 +339,7 @@
 				B4598B4517022F0000C7DACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

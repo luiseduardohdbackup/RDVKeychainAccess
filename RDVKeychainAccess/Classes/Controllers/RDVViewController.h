@@ -1,4 +1,4 @@
-// main.m
+// RDVViewController.h
 //
 // Copyright (c) 2013 Robert Dimitrov
 //
@@ -22,11 +22,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RDVAppDelegate.h"
+@interface RDVViewController : UITableViewController
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([RDVAppDelegate class]));
-    }
-}
+@end

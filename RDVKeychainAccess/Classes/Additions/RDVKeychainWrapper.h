@@ -1,4 +1,4 @@
-// main.m
+// RDVKeychainWrapper.h
 //
 // Copyright (c) 2013 Robert Dimitrov
 //
@@ -20,13 +20,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "RDVAppDelegate.h"
+@interface RDVKeychainWrapper : NSObject
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([RDVAppDelegate class]));
-    }
-}
+@end
