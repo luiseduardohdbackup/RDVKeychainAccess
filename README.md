@@ -24,7 +24,7 @@ Get an object from the keychain:
 Remove an object from the keychain:
 
 ```objective-c
-[[RDVKeychainWrapper sharedKeychainWrapper] removeObjectForKey:kRDVKeychainDemoEmail];
+[[RDVKeychainWrapper sharedKeychainWrapper] removeObjectForKey:@"someKey"];
 ```
 
 ## Requirements
