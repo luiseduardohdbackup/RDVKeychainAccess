@@ -21,6 +21,10 @@
 // THE SOFTWARE.
 
 #import "RDVViewController.h"
+#import "RDVKeychainWrapper.h"
+
+#define kRDVKeychainDemoEmail @"com.robbdimitrov.keychain:email"
+#define kRDVKeychainDemoPassword @"com.robbdimitrov.keychain:password"
 
 @interface RDVViewController () <UITextFieldDelegate, UIActionSheetDelegate>
 
@@ -40,6 +44,23 @@
     UIGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard:)];
     [tapGestureRecognizer setCancelsTouchesInView:NO];
     [self.view addGestureRecognizer:tapGestureRecognizer];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSString *email = nil;
+    NSString *password = nil;
+    
+    email = [[RDVKeychainWrapper sharedKeychainWrapper] objectForKey:kRDVKeychainDemoEmail];
+    if (email) {
+        [[self emailField] setText:email];
+    }
+    
+    password = [[RDVKeychainWrapper sharedKeychainWrapper] objectForKey:kRDVKeychainDemoPassword];
+    if (password) {
+        [[self passwordField] setText:password];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,10 +85,10 @@
     if (indexPath.section == 2) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Reset keychain?"
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Clear keychain?"
                                                                  delegate:self
                                                         cancelButtonTitle:@"Cancel"
-                                                   destructiveButtonTitle:@"Reset"
+                                                   destructiveButtonTitle:@"Clear"
                                                         otherButtonTitles:nil,
                                       nil];
         [actionSheet showInView:self.view];
@@ -78,7 +99,9 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
-        // reset keychain
+        RDVKeychainWrapper *keychainWrapper = [RDVKeychainWrapper sharedKeychainWrapper];
+        [keychainWrapper removeObjectForKey:kRDVKeychainDemoEmail];
+        [keychainWrapper removeObjectForKey:kRDVKeychainDemoPassword];
     }
 }
 
@@ -95,9 +118,9 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     if (textField == self.emailField) {
-        // save email
+        [[RDVKeychainWrapper sharedKeychainWrapper] setObject:self.emailField.text forKey:kRDVKeychainDemoEmail];
     } else {
-        // save password
+        [[RDVKeychainWrapper sharedKeychainWrapper] setObject:self.passwordField.text forKey:kRDVKeychainDemoPassword];
     }
 }
 

@@ -19,6 +19,7 @@
 		B4598B501702308B00C7DACD /* RDVKeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B491702308B00C7DACD /* RDVKeychainWrapper.m */; };
 		B4598B511702308B00C7DACD /* RDVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B4C1702308B00C7DACD /* RDVAppDelegate.m */; };
 		B4598B521702308B00C7DACD /* RDVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4598B4F1702308B00C7DACD /* RDVViewController.m */; };
+		B49993A0170CC04C00D407B7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B499939F170CC04C00D407B7 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		B4598B4C1702308B00C7DACD /* RDVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVAppDelegate.m; sourceTree = "<group>"; };
 		B4598B4E1702308B00C7DACD /* RDVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVViewController.h; sourceTree = "<group>"; };
 		B4598B4F1702308B00C7DACD /* RDVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVViewController.m; sourceTree = "<group>"; };
+		B499939F170CC04C00D407B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49993A0170CC04C00D407B7 /* Security.framework in Frameworks */,
 				B4598B2417022EFF00C7DACD /* UIKit.framework in Frameworks */,
 				B4598B2617022EFF00C7DACD /* Foundation.framework in Frameworks */,
 				B4598B2817022EFF00C7DACD /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +79,7 @@
 		B4598B2217022EFE00C7DACD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B499939F170CC04C00D407B7 /* Security.framework */,
 				B4598B2317022EFF00C7DACD /* UIKit.framework */,
 				B4598B2517022EFF00C7DACD /* Foundation.framework */,
 				B4598B2717022EFF00C7DACD /* CoreGraphics.framework */,

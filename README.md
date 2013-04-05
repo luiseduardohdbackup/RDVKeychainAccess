@@ -4,8 +4,28 @@
 
 ## Setup
 
-Drop the `RDVKeychainWrapper.h` and `RDVKeychainWrapper.m` into your project. If you don't have ARC
+Add `Security.framework` and drop the `RDVKeychainWrapper.h` and `RDVKeychainWrapper.m` into your project. If you don't have ARC
 enabled, you will need to set a `-fobjc-arc` compiler flag on the `.m` source file.
+
+## Example Usage
+
+Add object to the keychain:
+
+``` objective-c
+[[RDVKeychainWrapper sharedKeychainWrapper] setObject:@"someString" forKey:@"someKey"];
+```
+
+Get an object from the keychain:
+
+``` objective-c
+[[RDVKeychainWrapper sharedKeychainWrapper] objectForKey:@"someKey"]
+```
+
+Remove an object from the keychain:
+
+```objective-c
+[[RDVKeychainWrapper sharedKeychainWrapper] removeObjectForKey:kRDVKeychainDemoEmail];
+```
 
 ## Requirements
 

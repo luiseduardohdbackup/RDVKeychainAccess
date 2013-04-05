@@ -24,4 +24,25 @@
 
 @interface RDVKeychainWrapper : NSObject
 
+/*
+ * Get the shared keychain wrapper object
+ */
++ (RDVKeychainWrapper *)sharedKeychainWrapper;
+
+/*
+ * Add object in the keychain
+ */
+- (void)setObject:(id)object forKey:(NSString *)key;
+
+/*
+ * Get object from the keychain
+ */
+- (id)objectForKey:(NSString *)key;
+
+/*
+ * If there is an object in the keychain, associated with
+ * the key string, it will be deleted from the keychain
+ */
+- (void)removeObjectForKey:(NSString *)key;
+
 @end
