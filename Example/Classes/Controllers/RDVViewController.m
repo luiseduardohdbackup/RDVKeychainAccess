@@ -102,6 +102,8 @@
         RDVKeychainWrapper *keychainWrapper = [RDVKeychainWrapper sharedKeychainWrapper];
         [keychainWrapper removeObjectForKey:kRDVKeychainDemoEmail];
         [keychainWrapper removeObjectForKey:kRDVKeychainDemoPassword];
+        [[self emailField] setText:@""];
+        [[self passwordField] setText:@""];
     }
 }
 
